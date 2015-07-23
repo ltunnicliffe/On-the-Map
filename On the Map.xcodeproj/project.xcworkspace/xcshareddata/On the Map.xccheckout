@@ -14,11 +14,11 @@
 		<string>https://github.com/ltunnicliffe/On-the-Map.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>On the Map/On the Map.xcodeproj</string>
+	<string>On the Map.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>20D755142F3DC56475D67429E92F64C95E9B674A</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/ltunnicliffe/On-the-Map.git</string>
