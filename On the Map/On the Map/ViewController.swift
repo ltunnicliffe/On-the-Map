@@ -8,42 +8,54 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController {
    
    
     
+    @IBOutlet var passwordText: UITextField!
+    
+    
+    @IBOutlet var usernameText: UITextField!
     
     
     
-    var hello = usernameTextfield.text
 
     
     
+    
+    
+    @IBOutlet var udacityLabel: UILabel!
     
     
     
     
     
     @IBAction func loginButton(sender: AnyObject) {
+     
+    
         
+        var stringText:String = usernameText.text
+        
+        var stringPass:String = passwordText.text
+        
+        var httpString: String = "{\"udacity\": {\"" + stringText + "\": \"account@domain.com\", \""+stringPass+"\": \"********\"}}"
         
         
         let request = NSMutableURLRequest(URL: NSURL(string: "https://www.udacity.com/api/session")!)
         request.HTTPMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.HTTPBody = httpString.dataUsingEncoding(NSUTF8StringEncoding)
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(request) { data, response, error in
+            if error != nil { // Handle error…
+                return
+            }
+            let newData = data.subdataWithRange(NSMakeRange(5, data.length - 5)) /* subset response data! */
+            println(NSString(data: newData, encoding: NSUTF8StringEncoding))
+        }
+        task.resume()
         
-        
-     request.HTTPBody = "{\"udacity\": {" + usernameTextfield.text! + ": \"account@domain.com\", "+ passwordString + ": \"********\"}}".dataUsingEncoding(NSUTF8StringEncoding)
-//        let session = NSURLSession.sharedSession()
-//        let task = session.dataTaskWithRequest(request) { data, response, error in
-//            if error != nil { // Handle error…
-//                return
-//            }
-//            let newData = data.subdataWithRange(NSMakeRange(5, data.length - 5)) /* subset response data! */
-//            println(NSString(data: newData, encoding: NSUTF8StringEncoding))
-//        }
-//        task.resume()
         
         
         
@@ -59,9 +71,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
        UIApplication.sharedApplication().openURL(linkURL!)
             }
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+  
+        
+        
+        
     }
     
 
