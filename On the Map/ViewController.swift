@@ -35,17 +35,20 @@ class ViewController: UIViewController {
     
         
         var stringText:String = usernameText.text
+     
         
         var stringPass:String = passwordText.text
+        println(stringText)
+        println(stringPass)
         
-        var httpString: String = "{\"udacity\": {\"" + stringText + "\": \"account@domain.com\", \""+stringPass+"\": \"********\"}}"
-        
-        
+        var httpString: String = "{\"udacity\": {\"username\": \"" + stringText + "\", \"password\": \"" + stringPass + "\"}}"
+        println(httpString)
         let request = NSMutableURLRequest(URL: NSURL(string: "https://www.udacity.com/api/session")!)
         request.HTTPMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.HTTPBody = httpString.dataUsingEncoding(NSUTF8StringEncoding)
+        println(request.HTTPBody)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(request) { data, response, error in
             if error != nil { // Handle error…
