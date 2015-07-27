@@ -13,8 +13,10 @@
 		AC205D4E1B60FAE00021DBF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC205D4D1B60FAE00021DBF5 /* Images.xcassets */; };
 		AC205D511B60FAE00021DBF5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC205D4F1B60FAE00021DBF5 /* LaunchScreen.xib */; };
 		AC205D5D1B60FAE00021DBF5 /* On_the_MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC205D5C1B60FAE00021DBF5 /* On_the_MapTests.swift */; };
-		AC205D671B611B900021DBF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC205D661B611B900021DBF5 /* LoginViewController.swift */; };
 		AC5C16A91B61364E0071E7E3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5C16A81B61364E0071E7E3 /* MapViewController.swift */; };
+		AC80D2141B66AA3E0051A9C7 /* MapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D2131B66AA3E0051A9C7 /* MapTableViewController.swift */; };
+		AC80D2161B66BA010051A9C7 /* MapUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D2151B66BA010051A9C7 /* MapUser.swift */; };
+		AC80D2181B66C0500051A9C7 /* ParseLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D2171B66C0500051A9C7 /* ParseLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +40,10 @@
 		AC205D561B60FAE00021DBF5 /* On the MapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "On the MapTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC205D5B1B60FAE00021DBF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC205D5C1B60FAE00021DBF5 /* On_the_MapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = On_the_MapTests.swift; sourceTree = "<group>"; };
-		AC205D661B611B900021DBF5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AC5C16A81B61364E0071E7E3 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		AC80D2131B66AA3E0051A9C7 /* MapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapTableViewController.swift; path = ../MapTableViewController.swift; sourceTree = "<group>"; };
+		AC80D2151B66BA010051A9C7 /* MapUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapUser.swift; sourceTree = "<group>"; };
+		AC80D2171B66C0500051A9C7 /* ParseLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +87,11 @@
 			children = (
 				AC205D461B60FAE00021DBF5 /* AppDelegate.swift */,
 				AC205D481B60FAE00021DBF5 /* ViewController.swift */,
-				AC205D661B611B900021DBF5 /* LoginViewController.swift */,
 				AC205D4A1B60FAE00021DBF5 /* Main.storyboard */,
 				AC5C16A81B61364E0071E7E3 /* MapViewController.swift */,
+				AC80D2171B66C0500051A9C7 /* ParseLoader.swift */,
+				AC80D2151B66BA010051A9C7 /* MapUser.swift */,
+				AC80D2131B66AA3E0051A9C7 /* MapTableViewController.swift */,
 				AC205D4D1B60FAE00021DBF5 /* Images.xcassets */,
 				AC205D4F1B60FAE00021DBF5 /* LaunchScreen.xib */,
 				AC205D441B60FAE00021DBF5 /* Supporting Files */,
@@ -218,10 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC205D671B611B900021DBF5 /* LoginViewController.swift in Sources */,
 				AC205D491B60FAE00021DBF5 /* ViewController.swift in Sources */,
+				AC80D2161B66BA010051A9C7 /* MapUser.swift in Sources */,
 				AC205D471B60FAE00021DBF5 /* AppDelegate.swift in Sources */,
 				AC5C16A91B61364E0071E7E3 /* MapViewController.swift in Sources */,
+				AC80D2181B66C0500051A9C7 /* ParseLoader.swift in Sources */,
+				AC80D2141B66AA3E0051A9C7 /* MapTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

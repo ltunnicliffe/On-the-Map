@@ -9,70 +9,70 @@
 import UIKit
 import MapKit
 
+
+
+
 class MapViewController: UIViewController, MKMapViewDelegate {
     
     
     @IBOutlet var mapView: MKMapView!
   
     
+    
+   
     override func viewDidLoad() {
+  
         super.viewDidLoad()
-        parseLogin()
         
-       
+        //if mapUserArray.count != 0 {
         
-        
-        
-        
-        var latitude: CLLocationDegrees = 60.7
-        var longitude: CLLocationDegrees  = -73.9
-        var latDelta:CLLocationDegrees = 0.01
-        var longDelta:CLLocationDegrees = 0.01
-        var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
-        var location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-        var region:MKCoordinateRegion = MKCoordinateRegionMake (location, span)
-        mapView.setRegion(region, animated:true)
-        var annotation = MKPointAnnotation()
-        
-        annotation.coordinate = location
-        
-        annotation.title = "Niagra Falls"
-        
-        annotation.subtitle = "One day I'll go here..."
-        
-        mapView.addAnnotation(annotation)
-
-        
-        
-        
-        
-        var longPressRecognizer = UILongPressGestureRecognizer(target: self, action: "action:")
-        longPressRecognizer.minimumPressDuration = 2
-        mapView.addGestureRecognizer(longPressRecognizer)
+        for user in mapUserArray {
+            var latitude: CLLocationDegrees = user.latitude
+            var longitude: CLLocationDegrees  = user.longitude
+            var latDelta:CLLocationDegrees = 0.01
+            var longDelta:CLLocationDegrees = 0.01
+            var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+            var location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+            var region:MKCoordinateRegion = MKCoordinateRegionMake (location, span)
+            mapView.setRegion(region, animated:true)
+            var annotation = MKPointAnnotation()
+            annotation.coordinate = location
+            annotation.title = user.name
+            annotation.subtitle = user.annotationURL
+            mapView.addAnnotation(annotation)
+        }
         
     }
     
     
-    
-    func parseLogin(){
-    
-    let request = NSMutableURLRequest(URL: NSURL(string: "https://api.parse.com/1/classes/StudentLocation")!)
-    request.addValue("QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr", forHTTPHeaderField: "X-Parse-Application-Id")
-    request.addValue("QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY", forHTTPHeaderField: "X-Parse-REST-API-Key")
-    let session = NSURLSession.sharedSession()
-    let task = session.dataTaskWithRequest(request) { data, response, error in
-        if error != nil { // Handle error...
-            return
-        }
-        println(NSString(data: data, encoding: NSUTF8StringEncoding))
-    }
-    task.resume()
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         
+        let reuseId = "pin"
+        
+        var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+        
+        if pinView == nil {
+            pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            pinView!.canShowCallout = true
+            pinView!.pinColor = .Red
+            pinView!.rightCalloutAccessoryView = UIButton.buttonWithType(.DetailDisclosure) as! UIButton
         }
+        else {
+            pinView!.annotation = annotation
+        }
+        
+        return pinView
+    }
+    
+    // to the URL specified in the annotationViews subtitle property.
+    func mapView(mapView: MKMapView!, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+        if control == annotationView.rightCalloutAccessoryView {
+            let app = UIApplication.sharedApplication()
+            app.openURL(NSURL(string: annotationView.annotation.subtitle!)!)
+        }
+    }
 
-    
-    
-    
     
     
     
