@@ -77,7 +77,7 @@ class ViewController: UIViewController {
 
         
         
-    self.performSegueWithIdentifier("tabViewController", sender: nil)
+    self.performSegueWithIdentifier("navigationController", sender: nil)
 
         
     }
