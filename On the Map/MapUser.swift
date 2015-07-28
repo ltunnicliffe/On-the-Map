@@ -10,16 +10,16 @@ import Foundation
 
 
 class MapUser: NSObject {
-    var name: String!
-    var longitude: Double!
-    var latitude: Double!
-    var annotationURL: String!
+    var name: String?
+    var longitude: Double?
+    var latitude: Double?
+    var annotationURL: String?
     
-    init(name:String, longitude: Double, latitude:Double, annotationURL:String){
-        self.name = name
-        self.longitude = longitude
-        self.latitude = latitude
-        self.annotationURL = annotationURL
+    override init(){
+       
+//        self.longitude = longitude
+//        self.latitude = latitude
+//        self.annotationURL = annotationURL
     }
 
     

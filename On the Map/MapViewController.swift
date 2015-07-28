@@ -23,12 +23,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
   
         super.viewDidLoad()
-        
-        //if mapUserArray.count != 0 {
-        
         for user in mapUserArray {
-            var latitude: CLLocationDegrees = user.latitude
-            var longitude: CLLocationDegrees  = user.longitude
+            var latitude: CLLocationDegrees = user.latitude!
+            var longitude: CLLocationDegrees  = user.longitude!
             var latDelta:CLLocationDegrees = 0.01
             var longDelta:CLLocationDegrees = 0.01
             var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
@@ -73,15 +70,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
 
     func action (gestureRecognizer: UIGestureRecognizer) {
         println("pressed!")

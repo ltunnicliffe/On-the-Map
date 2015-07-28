@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  On the Map
 //
 //  Created by Luke on 2015/07/23.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
    
    
     
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
         println(stringText)
         println(stringPass)
         
-//        var httpString: String = "{\"udacity\": {\"username\": \"" + stringText + "\", \"password\": \"" + stringPass + "\"}}"
+      //  var httpString: String = "{\"udacity\": {\"username\": \"" + stringText + "\", \"password\": \"" + stringPass + "\"}}"
         var httpString: String = "{\"udacity\": {\"username\": \"cornishgiant@gmail.com\", \"password\": \"dragon\"}}"
         
         
@@ -66,17 +66,7 @@ class ViewController: UIViewController {
         }
         task.resume()
         
-        
-        
-        
-            
-            
-        
-        
-        // TMDBClient.sharedInstance().authenticateWithViewController(self)
-
-        
-        
+    
     self.performSegueWithIdentifier("navigationController", sender: nil)
 
         

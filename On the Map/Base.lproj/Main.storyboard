@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="vXZ-lx-hvc" customClass="LoginViewController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -125,12 +125,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-29" y="293"/>
+            <point key="canvasLocation" x="-199" y="327"/>
         </scene>
         <!--Navigation View Controller-->
         <scene sceneID="rLx-Io-ce2">
             <objects>
-                <navigationController id="tkL-ac-Q8d" customClass="NavigationViewController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationViewController" id="tkL-ac-Q8d" customClass="NavigationViewController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="search" id="9dZ-1g-AaM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PQc-J7-9p5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -148,7 +148,7 @@
         <!--On The Map-->
         <scene sceneID="Mnt-pr-xS4">
             <objects>
-                <viewController title="On The Map" id="85A-oP-Xad" customClass="MapViewController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" title="On The Map" id="85A-oP-Xad" customClass="MapViewController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="su2-hi-i42"/>
                         <viewControllerLayoutGuide type="bottom" id="jZX-lY-FJ0"/>
@@ -180,6 +180,112 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nry-y9-Ofo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1997" y="94"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="bww-Ac-YCo">
+            <objects>
+                <viewController storyboardIdentifier="EditViewController" id="9DR-w0-ISx" customClass="EditViewController" customModule="On_the_Map" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6FJ-gN-aHI"/>
+                        <viewControllerLayoutGuide type="bottom" id="fe3-Ll-2hQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4up-MU-LmO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where are you studying today?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yaz-Ih-x2C">
+                                <rect key="frame" x="100" y="70" width="400" height="20.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="4iK-jj-zuC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.23654522659999999" green="0.34564908049999998" blue="0.93189538039999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Location Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kmm-zP-dEW">
+                                <rect key="frame" x="0.0" y="249" width="600" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="udt-bT-Hsq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="udt-bT-Hsq"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4n-FK-WbL">
+                                <rect key="frame" x="200" y="440" width="200" height="35"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="diU-K8-IQs"/>
+                                </constraints>
+                                <state key="normal" title="Find on the Map">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="findOnMapButton:" destination="9DR-w0-ISx" eventType="touchUpInside" id="8VB-pH-MbM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="73l-0R-0XB">
+                                <rect key="frame" x="546" y="30" width="48" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButton:" destination="9DR-w0-ISx" eventType="touchUpInside" id="cjk-Ak-9xl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.53933569570460438" green="0.89303046746904768" blue="0.16283114294278353" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="kmm-zP-dEW" firstAttribute="leading" secondItem="4up-MU-LmO" secondAttribute="leadingMargin" constant="-16" id="5Ef-pg-Ref"/>
+                            <constraint firstItem="73l-0R-0XB" firstAttribute="trailing" secondItem="4up-MU-LmO" secondAttribute="trailingMargin" constant="10" id="804-6X-0r6"/>
+                            <constraint firstItem="Yaz-Ih-x2C" firstAttribute="top" secondItem="6FJ-gN-aHI" secondAttribute="bottom" constant="400" id="CGg-ev-gUd"/>
+                            <constraint firstAttribute="centerX" secondItem="Yaz-Ih-x2C" secondAttribute="centerX" id="Ppl-2j-oZd"/>
+                            <constraint firstItem="fe3-Ll-2hQ" firstAttribute="top" secondItem="H4n-FK-WbL" secondAttribute="bottom" constant="125" id="QGz-nb-ytt"/>
+                            <constraint firstItem="73l-0R-0XB" firstAttribute="top" secondItem="6FJ-gN-aHI" secondAttribute="bottom" constant="10" id="Shn-Xp-whq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kmm-zP-dEW" secondAttribute="trailing" constant="-16" id="SqL-8l-Z6Y"/>
+                            <constraint firstItem="Yaz-Ih-x2C" firstAttribute="top" secondItem="6FJ-gN-aHI" secondAttribute="bottom" constant="50" id="UhY-ec-CUj"/>
+                            <constraint firstAttribute="centerX" secondItem="H4n-FK-WbL" secondAttribute="centerX" id="WCj-TD-DdB"/>
+                            <constraint firstAttribute="centerY" secondItem="kmm-zP-dEW" secondAttribute="centerY" id="hPo-4w-xtk"/>
+                            <constraint firstItem="H4n-FK-WbL" firstAttribute="top" secondItem="kmm-zP-dEW" secondAttribute="bottom" constant="89" id="i5g-3i-drf"/>
+                            <constraint firstItem="kmm-zP-dEW" firstAttribute="top" secondItem="Yaz-Ih-x2C" secondAttribute="bottom" constant="158.5" id="ja9-wq-rap"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CGg-ev-gUd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="locationTextField" destination="kmm-zP-dEW" id="Z4C-wK-1xd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMV-fO-XMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2734" y="274"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="L4f-Tz-8HE">
+            <objects>
+                <viewController id="DHe-O6-L4u" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nu9-Db-jcV"/>
+                        <viewControllerLayoutGuide type="bottom" id="TTh-XN-WgR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FKf-Bg-Rnl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXZ-FF-aLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3459" y="274"/>
         </scene>
         <!--Map Table View Controller-->
         <scene sceneID="Yc6-dZ-bJE">

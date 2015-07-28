@@ -11,6 +11,9 @@ import Foundation
 
 
 var mapUserArray = [MapUser]()
+var userPosting = MapUser()
+
+
 
 
 class ParseLoader: NSObject {
@@ -28,11 +31,7 @@ class ParseLoader: NSObject {
             else{
                 var parsingError:NSError? = nil
                 let parsedResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &parsingError) as! NSDictionary
-                // println(parsedResult)
-                //  println(parsedResult["results"])
-                
-                var parsedDictionary2 = parsedResult["results"] as! NSArray                
-               // println(parsedDictionary2)
+                var parsedDictionary2 = parsedResult["results"] as! NSArray
                 for stringName in parsedDictionary2 {
                     var firstName: String = stringName["firstName"] as! String
                     var lastName: String = stringName["lastName"] as! String
@@ -40,29 +39,25 @@ class ParseLoader: NSObject {
                     var newLongitude = stringName["longitude"] as! Double
                     var newLatitude = stringName["latitude"] as! Double
                     var newURL = stringName["mediaURL"] as! String
-                    //Create MapUser Object
-                    var newUser = MapUser(name: nameCombo, longitude: newLongitude, latitude: newLatitude, annotationURL: newURL)
+                    var newUser = MapUser()
+                    newUser.name = nameCombo
+                    newUser.longitude = newLongitude
+                    newUser.latitude = newLatitude
+                    newUser.annotationURL = newURL
                     mapUserArray.append(newUser)
-                    
                 }
-
             }
-            
-  
         }
         task.resume()
-        
     }
     
     
     // MARK: - Shared Instance
     
     class func sharedInstance() -> ParseLoader {
-        
         struct Singleton {
             static var sharedInstance = ParseLoader()
         }
-        
         return Singleton.sharedInstance
     }
 

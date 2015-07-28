@@ -59,7 +59,7 @@ class MapTableViewController: UITableViewController {
         
         var arraySelector = mapUserArray[indexPath.row]
         var linkToUse = arraySelector.annotationURL
-        let linkURL = NSURL(string: linkToUse)
+        let linkURL = NSURL(string: linkToUse!)
         UIApplication.sharedApplication().openURL(linkURL!)
 
      
