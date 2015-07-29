@@ -10,7 +10,8 @@ import UIKit
 
 class NavigationViewController: UINavigationController {
 
- 
+    var appDelegate: AppDelegate!
+
     
     
     
@@ -19,7 +20,7 @@ class NavigationViewController: UINavigationController {
         let navigationItems = UINavigationItem()
         navigationItems.title = "On The Map"
         let leftButton = UIBarButtonItem(title: "Logout", style: UIBarButtonItemStyle.Plain, target: self, action: "logOut")
-        let rightButton1 = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: nil)
+        let rightButton1 = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: "refreshView")
         let rightButton2 = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "editView")
         let rightButtons = [rightButton1, rightButton2]
         navigationItems.leftBarButtonItem = leftButton
@@ -32,6 +33,14 @@ class NavigationViewController: UINavigationController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func refreshView(){
+        
+        appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        ParseLoader.sharedInstance().parseLogin()
+        
     }
     
     func editView(){
@@ -71,8 +80,8 @@ class NavigationViewController: UINavigationController {
         }
         task.resume()
         
-//        let logInViewController = self.storyboard!.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
-//        self.presentViewController(logInViewController, animated: true, completion: nil)
+        let logInViewController = self.storyboard!.instantiateViewControllerWithIdentifier("LoginViewController") as! LoginViewController
+        self.presentViewController(logInViewController, animated: true, completion: nil)
 
         
     }

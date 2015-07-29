@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class EditViewController: UIViewController {
+class EditViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet var locationTextField: UITextField!
@@ -20,8 +20,20 @@ class EditViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.locationTextField.delegate = self
+
 
         // Do any additional setup after loading the view.
+    }
+    
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(textField:UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,6 +77,10 @@ class EditViewController: UIViewController {
             userPosting.longitude = localSearchResponse.boundingRegion.center.longitude
     
             println("User Posting: \(userPosting.longitude)")
+            
+            
+            let linkViewController = self.storyboard!.instantiateViewControllerWithIdentifier("LinkViewController") as! LinkViewController
+            self.presentViewController(linkViewController, animated: true, completion: nil)
 
             
             }
