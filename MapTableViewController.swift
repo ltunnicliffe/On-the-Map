@@ -45,8 +45,11 @@ class MapTableViewController: UITableViewController {
 
         var cellFiller = mapUserArray[indexPath.row]
         
-        cell.textLabel?.text = cellFiller.name
-        
+        if cellFiller.userProperties.isEmpty {
+             cell.textLabel?.text = "Empty"
+        } else {
+            cell.textLabel?.text = cellFiller.userProperties["name"]
+    }
         return cell
     }
     
@@ -58,15 +61,19 @@ class MapTableViewController: UITableViewController {
         
         
         var arraySelector = mapUserArray[indexPath.row]
-        var linkToUse = arraySelector.annotationURL
-        let linkURL = NSURL(string: linkToUse!)
-        UIApplication.sharedApplication().openURL(linkURL!)
-
-     
+        if arraySelector.userProperties.isEmpty{
+            return
+        }
+        else {
+            var linkToUse = arraySelector.userProperties["annotationURL"]
+            let linkURL = NSURL(string: linkToUse!)
+            UIApplication.sharedApplication().openURL(linkURL!)
+      }
+        
         
     }
 
-
+}
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -112,4 +119,4 @@ class MapTableViewController: UITableViewController {
     }
     */
 
-}
+

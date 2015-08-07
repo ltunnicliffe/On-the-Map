@@ -9,9 +9,6 @@
 import UIKit
 import MapKit
 
-
-
-
 class MapViewController: UIViewController, MKMapViewDelegate {
     
     
@@ -19,9 +16,12 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         var annotations = [MKPointAnnotation]()
         super.viewDidLoad()
+        println("mapUserInfo: \(mapUserArray)")
+
         for user in mapUserArray {
-            var latitude: CLLocationDegrees = user.latitude!
-            var longitude: CLLocationDegrees  = user.longitude!
+            println("userInfo: \(user)")
+            var latitude: CLLocationDegrees = user.userLocation["latitude"]!
+            var longitude: CLLocationDegrees  = user.userLocation["longitude"]!
             var latDelta:CLLocationDegrees = 0.01
             var longDelta:CLLocationDegrees = 0.01
             var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
@@ -29,10 +29,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             var region:MKCoordinateRegion = MKCoordinateRegionMake (location, span)
             mapView.setRegion(region, animated:true)
             var annotation = MKPointAnnotation()
-            var annotationView = MKAnnotationView()
             annotation.coordinate = location
-            annotation.title = user.name
-            annotation.subtitle = user.annotationURL
+            annotation.title = user.userProperties["name"]
+            annotation.subtitle = user.userProperties["annotationURL"]
             annotations.append(annotation)
         }
         self.mapView.addAnnotations(annotations)

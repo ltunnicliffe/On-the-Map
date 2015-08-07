@@ -25,8 +25,8 @@ class LinkViewController: UIViewController, UITextFieldDelegate, MKMapViewDelega
         self.linkTextField.delegate = self
         
         
-        var latitude: CLLocationDegrees =  userPosting.latitude!
-        var longitude: CLLocationDegrees  =  userPosting.longitude!
+        var latitude: CLLocationDegrees =  userPosting.userLocation["latitude"]!
+        var longitude: CLLocationDegrees  =  userPosting.userLocation["longitude"]!
         var latDelta:CLLocationDegrees = 0.01
         var longDelta:CLLocationDegrees = 0.01
         var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
@@ -69,15 +69,15 @@ class LinkViewController: UIViewController, UITextFieldDelegate, MKMapViewDelega
     
     
     @IBAction func submitLink(sender: AnyObject) {
-        userPosting.annotationURL = linkTextField.text        
+        userPosting.userProperties["annotationURL"] = linkTextField.text
         let request = NSMutableURLRequest(URL: NSURL(string: "https://api.parse.com/1/classes/StudentLocation")!)
         request.HTTPMethod = "POST"
         request.addValue("QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr", forHTTPHeaderField: "X-Parse-Application-Id")
         request.addValue("QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY", forHTTPHeaderField: "X-Parse-REST-API-Key")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        var postString: String = "{\"uniqueKey\": \"1234\", \"firstName\": \"" + userPosting.name! + "\", \"lastName\": \"Tate\",\"mapString\": \"Mountain View, CA\", \"mediaURL\": \"" + userPosting.annotationURL! + "\""
-        var postString2: String = ",\"latitude\":" + String(stringInterpolationSegment: userPosting.latitude!) + ", \"longitude\":" + String(stringInterpolationSegment: userPosting.latitude!) + "}"
+        var postString: String = "{\"uniqueKey\": \"1234\", \"firstName\": \"" + userPosting.userProperties["name"]! + "\", \"lastName\": \"Tate\",\"mapString\": \"Mountain View, CA\", \"mediaURL\": \"" + userPosting.userProperties["annotationURL"]! + "\""
+        var postString2: String = ",\"latitude\":" + String(stringInterpolationSegment: userPosting.userLocation["latitude"]!) + ", \"longitude\":" + String(stringInterpolationSegment: userPosting.userLocation["latitude"]!) + "}"
         var completeString: String = postString + postString2
         
         request.HTTPBody = completeString.dataUsingEncoding(NSUTF8StringEncoding)

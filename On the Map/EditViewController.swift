@@ -50,16 +50,10 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func findOnMapButton(sender: AnyObject) {
-        
         nameLookup()
         locationFinder()
-
-        
     }
-    
-    
-    
-    
+
     func locationFinder(){
         var localSearchRequest = MKLocalSearchRequest()
         localSearchRequest.naturalLanguageQuery = locationTextField.text
@@ -72,26 +66,11 @@ class EditViewController: UIViewController, UITextFieldDelegate {
                 alert.show()
                 return
             }
-            
-            userPosting.latitude = localSearchResponse.boundingRegion.center.latitude
-            userPosting.longitude = localSearchResponse.boundingRegion.center.longitude
-    
-            println("User Posting: \(userPosting.longitude)")
-            
-            
+            userPosting.userLocation["latitude"] = localSearchResponse.boundingRegion.center.latitude
+            userPosting.userLocation["longitude"] = localSearchResponse.boundingRegion.center.longitude
             let linkViewController = self.storyboard!.instantiateViewControllerWithIdentifier("LinkViewController") as! LinkViewController
             self.presentViewController(linkViewController, animated: true, completion: nil)
-
-            
-            }
-            
-            
-//            
-//            self.pointAnnotation = MKPointAnnotation()
-//            self.pointAnnotation.title = searchBar.text
-//            self.pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: localSearchResponse.boundingRegion.center.latitude, longitude:     localSearchResponse.boundingRegion.center.longitude)
-        
-        
+           }
     }
     
     
@@ -115,8 +94,7 @@ class EditViewController: UIViewController, UITextFieldDelegate {
                     var parsedDictionary2 = parsedResult["user"] as! NSDictionary
                     var parsedDictionary3:String = parsedDictionary2["nickname"] as! String
                     println(parsedDictionary3)
-                    userPosting.name = parsedDictionary3
-                    println(userPosting.name)
+                    userPosting.userProperties["name"] = parsedDictionary3
                  }
             }
             task.resume()
