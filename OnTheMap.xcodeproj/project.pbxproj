@@ -21,6 +21,9 @@
 		AC80D2141B66AA3E0051A9C7 /* MapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D2131B66AA3E0051A9C7 /* MapTableViewController.swift */; };
 		AC80D2161B66BA010051A9C7 /* MapUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D2151B66BA010051A9C7 /* MapUser.swift */; };
 		AC80D2181B66C0500051A9C7 /* ParseLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D2171B66C0500051A9C7 /* ParseLoader.swift */; };
+		ACC648931B7B5D1B004921B6 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC648921B7B5D1B004921B6 /* FBSDKLoginKit.framework */; };
+		ACC648951B7B5D29004921B6 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC648941B7B5D29004921B6 /* FBSDKCoreKit.framework */; };
+		ACC648971B7BA0AE004921B6 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC648961B7BA0AE004921B6 /* Bolts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +37,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AC205D411B60FAE00021DBF5 /* On the Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "On the Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC205D411B60FAE00021DBF5 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC205D451B60FAE00021DBF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC205D461B60FAE00021DBF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC205D481B60FAE00021DBF5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AC205D4B1B60FAE00021DBF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC205D4D1B60FAE00021DBF5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AC205D501B60FAE00021DBF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		AC205D561B60FAE00021DBF5 /* On the MapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "On the MapTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC205D561B60FAE00021DBF5 /* OnTheMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTheMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC205D5B1B60FAE00021DBF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC205D5C1B60FAE00021DBF5 /* On_the_MapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = On_the_MapTests.swift; sourceTree = "<group>"; };
 		AC3CEC1A1B674AE600BDB502 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +55,10 @@
 		AC80D2131B66AA3E0051A9C7 /* MapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapTableViewController.swift; path = ../MapTableViewController.swift; sourceTree = "<group>"; };
 		AC80D2151B66BA010051A9C7 /* MapUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapUser.swift; sourceTree = "<group>"; };
 		AC80D2171B66C0500051A9C7 /* ParseLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseLoader.swift; sourceTree = "<group>"; };
+		ACC648921B7B5D1B004921B6 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../Desktop/FacebookSDKs-iOS-20150810/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		ACC648941B7B5D29004921B6 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../Desktop/FacebookSDKs-iOS-20150810/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		ACC648961B7BA0AE004921B6 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		ACC648CF1B7BAAC9004921B6 /* OnTheMap--Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "OnTheMap--Bridging-Header.h"; path = "../OnTheMap--Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACC648971B7BA0AE004921B6 /* Bolts.framework in Frameworks */,
+				ACC648951B7B5D29004921B6 /* FBSDKCoreKit.framework in Frameworks */,
+				ACC648931B7B5D1B004921B6 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +85,8 @@
 		AC205D381B60FAE00021DBF5 = {
 			isa = PBXGroup;
 			children = (
+				ACC648941B7B5D29004921B6 /* FBSDKCoreKit.framework */,
+				ACC648921B7B5D1B004921B6 /* FBSDKLoginKit.framework */,
 				AC205D431B60FAE00021DBF5 /* On the Map */,
 				AC205D591B60FAE00021DBF5 /* On the MapTests */,
 				AC205D421B60FAE00021DBF5 /* Products */,
@@ -84,8 +96,8 @@
 		AC205D421B60FAE00021DBF5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC205D411B60FAE00021DBF5 /* On the Map.app */,
-				AC205D561B60FAE00021DBF5 /* On the MapTests.xctest */,
+				AC205D411B60FAE00021DBF5 /* OnTheMap.app */,
+				AC205D561B60FAE00021DBF5 /* OnTheMapTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +105,8 @@
 		AC205D431B60FAE00021DBF5 /* On the Map */ = {
 			isa = PBXGroup;
 			children = (
+				ACC648CF1B7BAAC9004921B6 /* OnTheMap--Bridging-Header.h */,
+				ACC648961B7BA0AE004921B6 /* Bolts.framework */,
 				AC5B902F1B676C220079FBD7 /* View Controllers */,
 				AC205D4A1B60FAE00021DBF5 /* Main.storyboard */,
 				AC5B90631B67C9AF0079FBD7 /* UdacityLogin.swift */,
@@ -147,9 +161,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AC205D401B60FAE00021DBF5 /* On the Map */ = {
+		AC205D401B60FAE00021DBF5 /* OnTheMap */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC205D601B60FAE00021DBF5 /* Build configuration list for PBXNativeTarget "On the Map" */;
+			buildConfigurationList = AC205D601B60FAE00021DBF5 /* Build configuration list for PBXNativeTarget "OnTheMap" */;
 			buildPhases = (
 				AC205D3D1B60FAE00021DBF5 /* Sources */,
 				AC205D3E1B60FAE00021DBF5 /* Frameworks */,
@@ -159,14 +173,14 @@
 			);
 			dependencies = (
 			);
-			name = "On the Map";
+			name = OnTheMap;
 			productName = "On the Map";
-			productReference = AC205D411B60FAE00021DBF5 /* On the Map.app */;
+			productReference = AC205D411B60FAE00021DBF5 /* OnTheMap.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AC205D551B60FAE00021DBF5 /* On the MapTests */ = {
+		AC205D551B60FAE00021DBF5 /* OnTheMapTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC205D631B60FAE00021DBF5 /* Build configuration list for PBXNativeTarget "On the MapTests" */;
+			buildConfigurationList = AC205D631B60FAE00021DBF5 /* Build configuration list for PBXNativeTarget "OnTheMapTests" */;
 			buildPhases = (
 				AC205D521B60FAE00021DBF5 /* Sources */,
 				AC205D531B60FAE00021DBF5 /* Frameworks */,
@@ -177,9 +191,9 @@
 			dependencies = (
 				AC205D581B60FAE00021DBF5 /* PBXTargetDependency */,
 			);
-			name = "On the MapTests";
+			name = OnTheMapTests;
 			productName = "On the MapTests";
-			productReference = AC205D561B60FAE00021DBF5 /* On the MapTests.xctest */;
+			productReference = AC205D561B60FAE00021DBF5 /* OnTheMapTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -200,7 +214,7 @@
 					};
 				};
 			};
-			buildConfigurationList = AC205D3C1B60FAE00021DBF5 /* Build configuration list for PBXProject "On the Map" */;
+			buildConfigurationList = AC205D3C1B60FAE00021DBF5 /* Build configuration list for PBXProject "OnTheMap" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -213,8 +227,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AC205D401B60FAE00021DBF5 /* On the Map */,
-				AC205D551B60FAE00021DBF5 /* On the MapTests */,
+				AC205D401B60FAE00021DBF5 /* OnTheMap */,
+				AC205D551B60FAE00021DBF5 /* OnTheMapTests */,
 			);
 		};
 /* End PBXProject section */
@@ -270,7 +284,7 @@
 /* Begin PBXTargetDependency section */
 		AC205D581B60FAE00021DBF5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AC205D401B60FAE00021DBF5 /* On the Map */;
+			target = AC205D401B60FAE00021DBF5 /* OnTheMap */;
 			targetProxy = AC205D571B60FAE00021DBF5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -372,6 +386,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -380,9 +395,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/workLuke/Desktop/FacebookSDKs-iOS-20150810",
+					"$(PROJECT_DIR)/On",
+					the,
+					Map,
+				);
 				INFOPLIST_FILE = "On the Map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OnTheMap;
+				SWIFT_OBJC_BRIDGING_HEADER = "OnTheMap--Bridging-Header.h";
+				"SWIFT_OPTIMIZATION_LEVEL[arch=*]" = "-Onone";
 			};
 			name = Debug;
 		};
@@ -390,9 +414,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/workLuke/Desktop/FacebookSDKs-iOS-20150810",
+					"$(PROJECT_DIR)/On",
+					the,
+					Map,
+				);
 				INFOPLIST_FILE = "On the Map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OnTheMap;
+				SWIFT_OBJC_BRIDGING_HEADER = "OnTheMap--Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -402,6 +434,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/On",
+					the,
+					MapTests,
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -409,7 +444,7 @@
 				);
 				INFOPLIST_FILE = "On the MapTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OnTheMapTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/On the Map.app/On the Map";
 			};
 			name = Debug;
@@ -420,10 +455,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)/On",
+					the,
+					MapTests,
 				);
 				INFOPLIST_FILE = "On the MapTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OnTheMapTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/On the Map.app/On the Map";
 			};
 			name = Release;
@@ -431,7 +469,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AC205D3C1B60FAE00021DBF5 /* Build configuration list for PBXProject "On the Map" */ = {
+		AC205D3C1B60FAE00021DBF5 /* Build configuration list for PBXProject "OnTheMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC205D5E1B60FAE00021DBF5 /* Debug */,
@@ -440,7 +478,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC205D601B60FAE00021DBF5 /* Build configuration list for PBXNativeTarget "On the Map" */ = {
+		AC205D601B60FAE00021DBF5 /* Build configuration list for PBXNativeTarget "OnTheMap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC205D611B60FAE00021DBF5 /* Debug */,
@@ -449,7 +487,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC205D631B60FAE00021DBF5 /* Build configuration list for PBXNativeTarget "On the MapTests" */ = {
+		AC205D631B60FAE00021DBF5 /* Build configuration list for PBXNativeTarget "OnTheMapTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC205D641B60FAE00021DBF5 /* Debug */,

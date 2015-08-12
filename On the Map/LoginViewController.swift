@@ -4,11 +4,12 @@
 //
 //  Created by Luke on 2015/07/23.
 //  Copyright (c) 2015年 Luke Tunnicliffe. All rights reserved.
-//
+//  https://docs.google.com/document/d/1tPF1tmSzVYPSbpl7_JCeMKglKMIs3dUa4OrSAKEYNAs/pub?embedded=true
+// https://docs.google.com/document/d/14oMyCKfI-NCnOoaR1h7pjqDWkaOTv0lyh9drhanqrJA/pub?embedded=true
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate {
 
     @IBOutlet var passwordText: UITextField!
     @IBOutlet var usernameText: UITextField!
@@ -33,13 +34,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 alertViewMaker("The login connection has failed.", buttonTitle: "Please check your internet connection.")
             }
             else {
-                var parseLoginTest = ParseLoader.sharedInstance().parseLogin()
-                if parseLoginTest == false {
-                    alertViewMaker("The login connection has failed.", buttonTitle: "Please check your internet connection.")
-                }
-                else {
-                   loginSuccess()
-                }
+                loginSuccess()
             }
         }
     }
@@ -53,6 +48,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         activityIndicator.startAnimating()
         UIApplication.sharedApplication().beginIgnoringInteractionEvents()
     }
+    
+    
+
     
     func alertViewMaker(alertMessage:String, buttonTitle: String){
         self.activityIndicator.stopAnimating()
@@ -87,12 +85,86 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
        UIApplication.sharedApplication().openURL(linkURL!)
             }
     
+    
+    
+    // Facebook Delegate Methods
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        println("User Logged In")
+        
+        if ((error) != nil)
+        {
+            // Process error
+        }
+        else if result.isCancelled {
+            // Handle cancellations
+        }
+        else {
+            // If you ask for multiple permissions at once, you
+            // should check if specific permissions missing
+            if result.grantedPermissions.contains("email")
+            {
+                var udacityLoginTest = UdacityLogin.sharedInstance().udacityFacebookLogin()
+                if udacityLoginTest == false {
+                    alertViewMaker("The login connection has failed.", buttonTitle: "Please check your internet connection.")
+                }
+                else {
+                    loginSuccess()
+                }
+                
+            }
+        }
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        println("User Logged Out")
+    }
+    
+    func facebook(){
+        if (FBSDKAccessToken.currentAccessToken() != nil)
+        {
+            // User is already logged in, do work such as go to next view controller.
+        }
+        else
+        {
+            let loginView : FBSDKLoginButton = FBSDKLoginButton()
+            self.view.addSubview(loginView)
+            loginView.center = self.view.center
+            loginView.readPermissions = ["public_profile", "email", "user_friends"]
+            loginView.delegate = self
+        }
+    }
+    
+    func returnUserData()
+    {
+        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
+        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+            
+            if ((error) != nil)
+            {
+                // Process error
+                println("Error: \(error)")
+            }
+            else
+            {
+                println("fetched user: \(result)")
+                let userName : NSString = result.valueForKey("name") as! NSString
+                println("User Name is: \(userName)")
+                let userEmail : NSString = result.valueForKey("email") as! NSString
+                println("User Email is: \(userEmail)")
+            }
+        })
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.passwordText.delegate = self
         self.usernameText.delegate = self
         var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-    }
+        facebook()
+           }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         self.view.endEditing(true)

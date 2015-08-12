@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:On the Map.xcodeproj">
+      location = "self:/Users/workLuke/Udacity-Projects/OnTheMap/OnTheMap.xcodeproj">
    </FileRef>
 </Workspace>

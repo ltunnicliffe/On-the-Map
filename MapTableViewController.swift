@@ -12,6 +12,7 @@ class MapTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        println("tableview array: \(mapUserArray)")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

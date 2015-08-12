@@ -14,9 +14,43 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet var mapView: MKMapView!
     override func viewDidLoad() {
-        var annotations = [MKPointAnnotation]()
         super.viewDidLoad()
         println("mapUserInfo: \(mapUserArray)")
+
+        var parseLoginTest = ParseLoader.sharedInstance().parseLogin()
+        userCreator()
+
+        
+        
+//        var parseLoginTest =  ParseLoader.sharedInstance().parseInfoGetter {mapUserArray, error
+//            if let mapUserArray = mapUserArray {
+//                
+//                self.mapView.reloadInputViews()
+//            }
+//            
+//            else {
+//                
+//                println(error)
+//            }
+//        
+//        
+//        }
+        
+        
+           }
+    
+ //   override func viewDidAppear(animated: true) {
+    override func viewDidAppear(animated: Bool) {
+        userCreator()
+
+    }
+    
+
+    
+    
+    
+    func userCreator (){
+        var annotations = [MKPointAnnotation]()
 
         for user in mapUserArray {
             println("userInfo: \(user)")
@@ -35,7 +69,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             annotations.append(annotation)
         }
         self.mapView.addAnnotations(annotations)
+        
     }
+    
     
     func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         println("View for annotation on.")
