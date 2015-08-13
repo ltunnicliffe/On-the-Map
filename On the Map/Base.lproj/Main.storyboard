@@ -86,16 +86,48 @@
                                     <action selector="signupButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6Ps-k0-n1a"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJp-h2-pfB">
+                                <rect key="frame" x="200.5" y="498" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="tma-A0-TDX"/>
+                                    <constraint firstAttribute="width" constant="300" id="whn-M2-eMn"/>
+                                </constraints>
+                                <state key="normal" title="Go to map">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="whn-M2-eMn"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="goToMap:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="q55-ea-6uJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already logged in with Facebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="For-h2-8xR">
+                                <rect key="frame" x="150" y="469" width="300" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="U0C-Iv-ReG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.48349436489999997" blue="0.081985470670000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="gJp-h2-pfB" firstAttribute="top" secondItem="For-h2-8xR" secondAttribute="bottom" constant="8" id="1g6-Sp-jfd"/>
                             <constraint firstAttribute="centerX" secondItem="CiT-DE-f0a" secondAttribute="centerX" id="4yE-GS-96j"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gJp-h2-pfB" secondAttribute="bottom" constant="72" id="7LN-f8-p8p"/>
                             <constraint firstAttribute="centerX" secondItem="T8z-EC-c1t" secondAttribute="centerX" id="Ac4-EQ-gJg"/>
+                            <constraint firstItem="gJp-h2-pfB" firstAttribute="top" secondItem="For-h2-8xR" secondAttribute="bottom" constant="8" id="CMS-Ci-s7n"/>
                             <constraint firstItem="EWd-xW-5Fp" firstAttribute="top" secondItem="T8z-EC-c1t" secondAttribute="bottom" constant="11" id="GbC-aa-kcN"/>
                             <constraint firstItem="C2q-qJ-LZ0" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="37" id="H0s-bY-nCY"/>
                             <constraint firstAttribute="centerX" secondItem="C2q-qJ-LZ0" secondAttribute="centerX" id="HEp-mr-IjG"/>
                             <constraint firstAttribute="centerX" secondItem="EeH-fa-uMF" secondAttribute="centerX" id="Jx4-CN-ZXJ"/>
+                            <constraint firstAttribute="centerX" secondItem="gJp-h2-pfB" secondAttribute="centerX" id="LHW-LZ-YW6"/>
                             <constraint firstItem="T8z-EC-c1t" firstAttribute="top" secondItem="EeH-fa-uMF" secondAttribute="bottom" constant="19" id="MAR-dc-o3c"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="gJp-h2-pfB" secondAttribute="bottom" constant="72" id="Vvl-CJ-yor"/>
                             <constraint firstItem="EeH-fa-uMF" firstAttribute="top" secondItem="CiT-DE-f0a" secondAttribute="bottom" constant="20" id="WrF-ei-Bam"/>
                             <constraint firstItem="VBe-Oz-Vwm" firstAttribute="top" secondItem="T8z-EC-c1t" secondAttribute="bottom" constant="20" id="bEC-9w-w4k"/>
                             <constraint firstItem="Ko8-Ao-FjQ" firstAttribute="top" secondItem="T8z-EC-c1t" secondAttribute="bottom" constant="15" id="dxw-2U-kNC"/>
@@ -103,6 +135,7 @@
                             <constraint firstAttribute="centerX" secondItem="EeH-fa-uMF" secondAttribute="centerX" id="fAU-4d-khy"/>
                             <constraint firstItem="CiT-DE-f0a" firstAttribute="top" secondItem="C2q-qJ-LZ0" secondAttribute="bottom" constant="34" id="g17-CO-ucI"/>
                             <constraint firstItem="EWd-xW-5Fp" firstAttribute="leading" secondItem="VBe-Oz-Vwm" secondAttribute="trailing" constant="52" id="l48-Hp-Nk6"/>
+                            <constraint firstAttribute="centerX" secondItem="For-h2-8xR" secondAttribute="centerX" id="lfy-ax-v06"/>
                             <constraint firstItem="EeH-fa-uMF" firstAttribute="top" secondItem="CiT-DE-f0a" secondAttribute="bottom" constant="20" id="oHW-KU-Fkw"/>
                             <constraint firstItem="VBe-Oz-Vwm" firstAttribute="leading" secondItem="Ko8-Ao-FjQ" secondAttribute="trailing" constant="-86" id="pAW-xl-1cz"/>
                             <constraint firstItem="CiT-DE-f0a" firstAttribute="top" secondItem="C2q-qJ-LZ0" secondAttribute="bottom" constant="20" id="qBQ-6D-T3w"/>
@@ -113,10 +146,14 @@
                             <mask key="constraints">
                                 <exclude reference="g17-CO-ucI"/>
                                 <exclude reference="emM-6m-Ae8"/>
+                                <exclude reference="1g6-Sp-jfd"/>
+                                <exclude reference="7LN-f8-p8p"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="facebookAlready" destination="For-h2-8xR" id="bjY-DT-DKL"/>
+                        <outlet property="goToMap" destination="gJp-h2-pfB" id="WfZ-1G-UVz"/>
                         <outlet property="passwordText" destination="EeH-fa-uMF" id="Fcr-rp-JgT"/>
                         <outlet property="udacityLabel" destination="C2q-qJ-LZ0" id="gyi-m1-T3r"/>
                         <outlet property="usernameText" destination="CiT-DE-f0a" id="IPg-xW-6Kx"/>

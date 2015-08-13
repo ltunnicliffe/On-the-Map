@@ -14,15 +14,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     @IBOutlet var passwordText: UITextField!
     @IBOutlet var usernameText: UITextField!
     @IBOutlet var udacityLabel: UILabel!
+    @IBOutlet var goToMap: UIButton!
+    @IBOutlet var facebookAlready: UILabel!
+    
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
 
     @IBAction func loginButton(sender: AnyObject) {
         activityIndicatorMaker()
-//        var stringText:String = usernameText.text
-//        var stringPass:String = passwordText.text
-        var stringText:String = "cornishgiant@gmail.com"
-        var stringPass:String = "dragon"
+        var stringText:String = usernameText.text
+        var stringPass:String = passwordText.text
+//        var stringText:String = "cornishgiant@gmail.com"
+//        var stringPass:String = "dragon"
         var emailTest = isValidEmail(stringText)
         var passwordTest = isPasswordValid(stringPass)
         if emailTest == false || passwordTest == false  {
@@ -121,9 +124,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     }
     
     func facebook(){
+        println("Facebook called")
         if (FBSDKAccessToken.currentAccessToken() != nil)
         {
-            // User is already logged in, do work such as go to next view controller.
+
+            let loginView : FBSDKLoginButton = FBSDKLoginButton()
+            self.view.addSubview(loginView)
+            loginView.center = self.view.center
+            loginView.readPermissions = ["public_profile", "email", "user_friends"]
+            loginView.delegate = self
+            facebookAlready.hidden = false
+            goToMap.hidden = false
+            
+            
         }
         else
         {
@@ -132,6 +145,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
             loginView.center = self.view.center
             loginView.readPermissions = ["public_profile", "email", "user_friends"]
             loginView.delegate = self
+            facebookAlready.hidden = true
+            goToMap.hidden = true
         }
     }
     
@@ -157,9 +172,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     }
     
     
+    @IBAction func goToMap(sender: AnyObject) {
+        loginSuccess()
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        goToMap.hidden = true
+        facebookAlready.hidden = true
         self.passwordText.delegate = self
         self.usernameText.delegate = self
         var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate

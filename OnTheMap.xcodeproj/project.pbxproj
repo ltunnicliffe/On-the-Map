@@ -14,6 +14,8 @@
 		AC205D511B60FAE00021DBF5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC205D4F1B60FAE00021DBF5 /* LaunchScreen.xib */; };
 		AC205D5D1B60FAE00021DBF5 /* On_the_MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC205D5C1B60FAE00021DBF5 /* On_the_MapTests.swift */; };
 		AC3CEC1B1B674AE600BDB502 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3CEC1A1B674AE600BDB502 /* NavigationViewController.swift */; };
+		AC4852991B7BC7870040157E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4852971B7BC7870040157E /* FBSDKCoreKit.framework */; };
+		AC48529A1B7BC7870040157E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4852981B7BC7870040157E /* FBSDKLoginKit.framework */; };
 		AC5B902E1B676C1C0079FBD7 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B902D1B676C1C0079FBD7 /* EditViewController.swift */; };
 		AC5B90311B6787160079FBD7 /* LinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B90301B6787160079FBD7 /* LinkViewController.swift */; };
 		AC5B90641B67C9AF0079FBD7 /* UdacityLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B90631B67C9AF0079FBD7 /* UdacityLogin.swift */; };
@@ -21,9 +23,6 @@
 		AC80D2141B66AA3E0051A9C7 /* MapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D2131B66AA3E0051A9C7 /* MapTableViewController.swift */; };
 		AC80D2161B66BA010051A9C7 /* MapUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D2151B66BA010051A9C7 /* MapUser.swift */; };
 		AC80D2181B66C0500051A9C7 /* ParseLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D2171B66C0500051A9C7 /* ParseLoader.swift */; };
-		ACC648931B7B5D1B004921B6 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC648921B7B5D1B004921B6 /* FBSDKLoginKit.framework */; };
-		ACC648951B7B5D29004921B6 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC648941B7B5D29004921B6 /* FBSDKCoreKit.framework */; };
-		ACC648971B7BA0AE004921B6 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC648961B7BA0AE004921B6 /* Bolts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +47,8 @@
 		AC205D5B1B60FAE00021DBF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC205D5C1B60FAE00021DBF5 /* On_the_MapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = On_the_MapTests.swift; sourceTree = "<group>"; };
 		AC3CEC1A1B674AE600BDB502 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		AC4852971B7BC7870040157E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		AC4852981B7BC7870040157E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		AC5B902D1B676C1C0079FBD7 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		AC5B90301B6787160079FBD7 /* LinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkViewController.swift; sourceTree = "<group>"; };
 		AC5B90631B67C9AF0079FBD7 /* UdacityLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityLogin.swift; sourceTree = "<group>"; };
@@ -55,9 +56,6 @@
 		AC80D2131B66AA3E0051A9C7 /* MapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapTableViewController.swift; path = ../MapTableViewController.swift; sourceTree = "<group>"; };
 		AC80D2151B66BA010051A9C7 /* MapUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapUser.swift; sourceTree = "<group>"; };
 		AC80D2171B66C0500051A9C7 /* ParseLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseLoader.swift; sourceTree = "<group>"; };
-		ACC648921B7B5D1B004921B6 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../Desktop/FacebookSDKs-iOS-20150810/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
-		ACC648941B7B5D29004921B6 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../Desktop/FacebookSDKs-iOS-20150810/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
-		ACC648961B7BA0AE004921B6 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		ACC648CF1B7BAAC9004921B6 /* OnTheMap--Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "OnTheMap--Bridging-Header.h"; path = "../OnTheMap--Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,9 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACC648971B7BA0AE004921B6 /* Bolts.framework in Frameworks */,
-				ACC648951B7B5D29004921B6 /* FBSDKCoreKit.framework in Frameworks */,
-				ACC648931B7B5D1B004921B6 /* FBSDKLoginKit.framework in Frameworks */,
+				AC48529A1B7BC7870040157E /* FBSDKLoginKit.framework in Frameworks */,
+				AC4852991B7BC7870040157E /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,8 +82,6 @@
 		AC205D381B60FAE00021DBF5 = {
 			isa = PBXGroup;
 			children = (
-				ACC648941B7B5D29004921B6 /* FBSDKCoreKit.framework */,
-				ACC648921B7B5D1B004921B6 /* FBSDKLoginKit.framework */,
 				AC205D431B60FAE00021DBF5 /* On the Map */,
 				AC205D591B60FAE00021DBF5 /* On the MapTests */,
 				AC205D421B60FAE00021DBF5 /* Products */,
@@ -106,12 +101,13 @@
 			isa = PBXGroup;
 			children = (
 				ACC648CF1B7BAAC9004921B6 /* OnTheMap--Bridging-Header.h */,
-				ACC648961B7BA0AE004921B6 /* Bolts.framework */,
 				AC5B902F1B676C220079FBD7 /* View Controllers */,
 				AC205D4A1B60FAE00021DBF5 /* Main.storyboard */,
 				AC5B90631B67C9AF0079FBD7 /* UdacityLogin.swift */,
 				AC80D2171B66C0500051A9C7 /* ParseLoader.swift */,
 				AC80D2151B66BA010051A9C7 /* MapUser.swift */,
+				AC4852971B7BC7870040157E /* FBSDKCoreKit.framework */,
+				AC4852981B7BC7870040157E /* FBSDKLoginKit.framework */,
 				AC205D441B60FAE00021DBF5 /* Supporting Files */,
 			);
 			path = "On the Map";
@@ -345,6 +341,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -383,6 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -397,7 +395,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/workLuke/Desktop/FacebookSDKs-iOS-20150810",
 					"$(PROJECT_DIR)/On",
 					the,
 					Map,
@@ -416,7 +413,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/workLuke/Desktop/FacebookSDKs-iOS-20150810",
 					"$(PROJECT_DIR)/On",
 					the,
 					Map,
@@ -431,38 +427,26 @@
 		AC205D641B60FAE00021DBF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(PROJECT_DIR)/On",
-					the,
-					MapTests,
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "On the MapTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = OnTheMapTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/On the Map.app/On the Map";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnTheMap.app/OnTheMap";
 			};
 			name = Debug;
 		};
 		AC205D651B60FAE00021DBF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(PROJECT_DIR)/On",
-					the,
-					MapTests,
-				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "On the MapTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = OnTheMapTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/On the Map.app/On the Map";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnTheMap.app/OnTheMap";
 			};
 			name = Release;
 		};
