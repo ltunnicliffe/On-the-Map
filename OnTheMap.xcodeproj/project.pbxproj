@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC1E29A01B7C97ED004443CB /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1E299E1B7C976B004443CB /* FBSDKCoreKit.framework */; };
 		AC205D471B60FAE00021DBF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC205D461B60FAE00021DBF5 /* AppDelegate.swift */; };
 		AC205D491B60FAE00021DBF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC205D481B60FAE00021DBF5 /* LoginViewController.swift */; };
 		AC205D4C1B60FAE00021DBF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC205D4A1B60FAE00021DBF5 /* Main.storyboard */; };
@@ -14,7 +15,6 @@
 		AC205D511B60FAE00021DBF5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC205D4F1B60FAE00021DBF5 /* LaunchScreen.xib */; };
 		AC205D5D1B60FAE00021DBF5 /* On_the_MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC205D5C1B60FAE00021DBF5 /* On_the_MapTests.swift */; };
 		AC3CEC1B1B674AE600BDB502 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3CEC1A1B674AE600BDB502 /* NavigationViewController.swift */; };
-		AC4852991B7BC7870040157E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4852971B7BC7870040157E /* FBSDKCoreKit.framework */; };
 		AC48529A1B7BC7870040157E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4852981B7BC7870040157E /* FBSDKLoginKit.framework */; };
 		AC5B902E1B676C1C0079FBD7 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B902D1B676C1C0079FBD7 /* EditViewController.swift */; };
 		AC5B90311B6787160079FBD7 /* LinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B90301B6787160079FBD7 /* LinkViewController.swift */; };
@@ -36,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC1E299E1B7C976B004443CB /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../Desktop/FacebookSDKs-iOS-20150810/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		AC205D411B60FAE00021DBF5 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC205D451B60FAE00021DBF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC205D461B60FAE00021DBF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,8 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC1E29A01B7C97ED004443CB /* FBSDKCoreKit.framework in Frameworks */,
 				AC48529A1B7BC7870040157E /* FBSDKLoginKit.framework in Frameworks */,
-				AC4852991B7BC7870040157E /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +83,7 @@
 		AC205D381B60FAE00021DBF5 = {
 			isa = PBXGroup;
 			children = (
+				AC1E299E1B7C976B004443CB /* FBSDKCoreKit.framework */,
 				AC205D431B60FAE00021DBF5 /* On the Map */,
 				AC205D591B60FAE00021DBF5 /* On the MapTests */,
 				AC205D421B60FAE00021DBF5 /* Products */,
@@ -346,6 +348,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -384,6 +387,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -395,9 +399,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/On",
-					the,
-					Map,
+					"/Users/workLuke/Desktop/FacebookSDKs-iOS-20150810",
 				);
 				INFOPLIST_FILE = "On the Map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -413,9 +415,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/On",
-					the,
-					Map,
+					"/Users/workLuke/Desktop/FacebookSDKs-iOS-20150810",
 				);
 				INFOPLIST_FILE = "On the Map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
