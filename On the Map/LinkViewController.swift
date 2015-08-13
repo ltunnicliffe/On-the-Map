@@ -36,17 +36,8 @@ class LinkViewController: UIViewController, UITextFieldDelegate, MKMapViewDelega
         var annotation = MKPointAnnotation()
         annotation.coordinate = location
         mapView.addAnnotation(annotation)
-        
-
-        
-
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         self.view.endEditing(true)
@@ -57,16 +48,10 @@ class LinkViewController: UIViewController, UITextFieldDelegate, MKMapViewDelega
         return true
     }
 
-    
-
     @IBAction func cancelButton(sender: AnyObject) {
-        
         let navigationViewController = self.storyboard!.instantiateViewControllerWithIdentifier("NavigationViewController") as! NavigationViewController
         self.presentViewController(navigationViewController, animated: true, completion: nil)
-        
-
     }
-    
     
     @IBAction func submitLink(sender: AnyObject) {
         userPosting.userProperties["annotationURL"] = linkTextField.text
@@ -90,13 +75,7 @@ class LinkViewController: UIViewController, UITextFieldDelegate, MKMapViewDelega
         }
         task.resume()
         
-        
-        
-        
         let mapViewController = self.storyboard!.instantiateViewControllerWithIdentifier("NavigationViewController") as! NavigationViewController
         self.presentViewController(mapViewController, animated: true, completion: nil)
-        
     }
-    
-
 }

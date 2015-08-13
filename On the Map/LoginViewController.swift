@@ -24,8 +24,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         activityIndicatorMaker()
         var stringText:String = usernameText.text
         var stringPass:String = passwordText.text
-//        var stringText:String = "cornishgiant@gmail.com"
-//        var stringPass:String = "dragon"
         var emailTest = isValidEmail(stringText)
         var passwordTest = isPasswordValid(stringPass)
         if emailTest == false || passwordTest == false  {
@@ -87,9 +85,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
        let linkURL=NSURL(string: "http://www.udacity.com")
        UIApplication.sharedApplication().openURL(linkURL!)
             }
-    
-    
-    
+
     // Facebook Delegate Methods
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {

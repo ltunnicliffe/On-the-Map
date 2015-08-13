@@ -19,24 +19,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 
         var parseLoginTest = ParseLoader.sharedInstance().parseLogin()
         userCreator()
-
-        
-        
-//        var parseLoginTest =  ParseLoader.sharedInstance().parseInfoGetter {mapUserArray, error
-//            if let mapUserArray = mapUserArray {
-//                
-//                self.mapView.reloadInputViews()
-//            }
-//            
-//            else {
-//                
-//                println(error)
-//            }
-//        
-//        
-//        }
-        
-        
            }
     
  //   override func viewDidAppear(animated: true) {
@@ -44,10 +26,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         userCreator()
 
     }
-    
 
-    
-    
     
     func userCreator (){
         var annotations = [MKPointAnnotation]()

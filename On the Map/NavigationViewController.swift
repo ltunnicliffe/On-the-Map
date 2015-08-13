@@ -13,8 +13,6 @@ class NavigationViewController: UINavigationController {
     var appDelegate: AppDelegate!
 
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let navigationItems = UINavigationItem()
@@ -70,11 +68,7 @@ class NavigationViewController: UINavigationController {
                 return
             }
             let newData = data.subdataWithRange(NSMakeRange(5, data.length - 5))
-  
-        
 
-            
-            
             /* subset response data! */
             println(NSString(data: newData, encoding: NSUTF8StringEncoding))
         }

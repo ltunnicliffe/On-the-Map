@@ -13,17 +13,11 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet var locationTextField: UITextField!
-    
-    
-    
-    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.locationTextField.delegate = self
-
-
-        // Do any additional setup after loading the view.
     }
     
     
@@ -72,11 +66,7 @@ class EditViewController: UIViewController, UITextFieldDelegate {
             self.presentViewController(linkViewController, animated: true, completion: nil)
            }
     }
-    
-    
 
-    
-        
         func nameLookup(){
             
             let request = NSMutableURLRequest(URL: NSURL(string: "https://www.udacity.com/api/users/3903878747")!)
@@ -102,16 +92,6 @@ class EditViewController: UIViewController, UITextFieldDelegate {
             
             
         }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
