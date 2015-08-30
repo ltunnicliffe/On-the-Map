@@ -12,6 +12,8 @@
 	<dict>
 		<key>20D755142F3DC56475D67429E92F64C95E9B674A</key>
 		<string>https://github.com/ltunnicliffe/On-the-Map.git</string>
+		<key>87D62A2FBE2FB0BD5086BC87A0585D8D0CB4DB71</key>
+		<string>http://www.github.com/cornishgiant/gitHubTest3.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>OnTheMap.xcodeproj</string>
@@ -19,6 +21,8 @@
 	<dict>
 		<key>20D755142F3DC56475D67429E92F64C95E9B674A</key>
 		<string>../..</string>
+		<key>87D62A2FBE2FB0BD5086BC87A0585D8D0CB4DB71</key>
+		<string>../../../../Desktop/Apps</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/ltunnicliffe/On-the-Map.git</string>
@@ -28,6 +32,14 @@
 	<string>20D755142F3DC56475D67429E92F64C95E9B674A</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>87D62A2FBE2FB0BD5086BC87A0585D8D0CB4DB71</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Apps</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
