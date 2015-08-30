@@ -50,9 +50,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         UIApplication.sharedApplication().beginIgnoringInteractionEvents()
     }
     
-    
-
-    
     func alertViewMaker(alertMessage:String, buttonTitle: String){
         self.activityIndicator.stopAnimating()
         UIApplication.sharedApplication().endIgnoringInteractionEvents()
@@ -99,8 +96,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
             // Handle cancellations
         }
         else {
-            // If you ask for multiple permissions at once, you
-            // should check if specific permissions missing
             if result.grantedPermissions.contains("email")
             {
                 var udacityLoginTest = UdacityLogin.sharedInstance().udacityFacebookLogin()
@@ -131,9 +126,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
             loginView.delegate = self
             facebookAlready.hidden = false
             goToMap.hidden = false
-            
-            
         }
+            
         else
         {
             let loginView : FBSDKLoginButton = FBSDKLoginButton()
@@ -171,7 +165,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     @IBAction func goToMap(sender: AnyObject) {
         loginSuccess()
     }
-    
     
     
     override func viewDidLoad() {
