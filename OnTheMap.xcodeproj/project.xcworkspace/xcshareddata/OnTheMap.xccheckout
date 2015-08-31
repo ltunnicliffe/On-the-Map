@@ -22,7 +22,7 @@
 		<key>20D755142F3DC56475D67429E92F64C95E9B674A</key>
 		<string>../..</string>
 		<key>87D62A2FBE2FB0BD5086BC87A0585D8D0CB4DB71</key>
-		<string>../../../../Desktop/Apps</string>
+		<string>../../../Desktop/Apps</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/ltunnicliffe/On-the-Map.git</string>

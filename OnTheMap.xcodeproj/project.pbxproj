@@ -21,8 +21,8 @@
 		AC80D2141B66AA3E0051A9C7 /* MapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D2131B66AA3E0051A9C7 /* MapTableViewController.swift */; };
 		AC80D2161B66BA010051A9C7 /* MapUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D2151B66BA010051A9C7 /* MapUser.swift */; };
 		AC80D2181B66C0500051A9C7 /* ParseLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D2171B66C0500051A9C7 /* ParseLoader.swift */; };
-		ACE41C5C1B9368D30008330D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE41C5A1B9368D30008330D /* FBSDKCoreKit.framework */; };
-		ACE41C5D1B9368D30008330D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACE41C5B1B9368D30008330D /* FBSDKLoginKit.framework */; };
+		ACD373D11B9439CF00BF8D64 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD373CF1B9439CF00BF8D64 /* FBSDKCoreKit.framework */; };
+		ACD373D21B9439CF00BF8D64 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD373D01B9439CF00BF8D64 /* FBSDKLoginKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,8 @@
 		AC80D2151B66BA010051A9C7 /* MapUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapUser.swift; sourceTree = "<group>"; };
 		AC80D2171B66C0500051A9C7 /* ParseLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseLoader.swift; sourceTree = "<group>"; };
 		ACC648CF1B7BAAC9004921B6 /* OnTheMap--Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnTheMap--Bridging-Header.h"; sourceTree = "<group>"; };
-		ACE41C5A1B9368D30008330D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../Desktop/Apps/Facebook SDK/FacebookSDKs-iOS-20150810/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
-		ACE41C5B1B9368D30008330D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../Desktop/Apps/Facebook SDK/FacebookSDKs-iOS-20150810/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		ACD373CF1B9439CF00BF8D64 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../Desktop/Apps/Facebook SDK/FacebookSDKs-iOS-20150810/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		ACD373D01B9439CF00BF8D64 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../Desktop/Apps/Facebook SDK/FacebookSDKs-iOS-20150810/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACE41C5D1B9368D30008330D /* FBSDKLoginKit.framework in Frameworks */,
-				ACE41C5C1B9368D30008330D /* FBSDKCoreKit.framework in Frameworks */,
+				ACD373D21B9439CF00BF8D64 /* FBSDKLoginKit.framework in Frameworks */,
+				ACD373D11B9439CF00BF8D64 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,8 +86,8 @@
 				AC205D431B60FAE00021DBF5 /* On the Map */,
 				AC205D591B60FAE00021DBF5 /* On the MapTests */,
 				AC205D421B60FAE00021DBF5 /* Products */,
-				ACE41C5A1B9368D30008330D /* FBSDKCoreKit.framework */,
-				ACE41C5B1B9368D30008330D /* FBSDKLoginKit.framework */,
+				ACD373CF1B9439CF00BF8D64 /* FBSDKCoreKit.framework */,
+				ACD373D01B9439CF00BF8D64 /* FBSDKLoginKit.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -403,6 +403,9 @@
 					Map,
 					/Users/workLuke/Desktop/Apps/Facebook,
 					"SDK/FacebookSDKs-iOS-20150810",
+					"$(PROJECT_DIR)",
+					/Users/workLuke/Desktop/Apps/Facebook,
+					"SDK/FacebookSDKs-iOS-20150810",
 				);
 				INFOPLIST_FILE = "On the Map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -422,6 +425,9 @@
 					"$(PROJECT_DIR)/On",
 					the,
 					Map,
+					/Users/workLuke/Desktop/Apps/Facebook,
+					"SDK/FacebookSDKs-iOS-20150810",
+					"$(PROJECT_DIR)",
 					/Users/workLuke/Desktop/Apps/Facebook,
 					"SDK/FacebookSDKs-iOS-20150810",
 				);
