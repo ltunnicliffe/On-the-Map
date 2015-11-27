@@ -27,17 +27,17 @@ class ParseLoader: NSObject {
         request.addValue("QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY", forHTTPHeaderField: "X-Parse-REST-API-Key")
         request.addValue("100", forHTTPHeaderField: "limit")
         request.addValue("-updatedAt", forHTTPHeaderField: "order")
-        println(request)
+        print(request)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(request) { data, response, error in
             if error != nil { // Handle error...
-                println("Parsing Error")
+                print("Parsing Error")
                 parseSuccess = false
                 return
             }
             else{
                 var parsingError:NSError? = nil
-                let parsedResult = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: &parsingError) as! NSDictionary
+                let parsedResult = (try! NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)) as! NSDictionary
                 var parsedDictionary2 = parsedResult["results"] as! NSArray
                 for stringName in parsedDictionary2 {
                     var firstName: String = stringName["firstName"] as! String

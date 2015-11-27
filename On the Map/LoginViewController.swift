@@ -22,15 +22,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
 
     @IBAction func loginButton(sender: AnyObject) {
         activityIndicatorMaker()
-        var stringText:String = usernameText.text
-        var stringPass:String = passwordText.text
-        var emailTest = isValidEmail(stringText)
-        var passwordTest = isPasswordValid(stringPass)
+        let stringText:String = usernameText.text
+        let stringPass:String = passwordText.text
+        let emailTest = isValidEmail(stringText)
+        let passwordTest = isPasswordValid(stringPass)
         if emailTest == false || passwordTest == false  {
             alertViewMaker("Your email or password is incorrect.", buttonTitle: "Please try logging in again.")
         }
         else {
-        var udacityLoginTest = UdacityLogin.sharedInstance().udacityLogin(stringText, passwordText: stringPass)
+        let udacityLoginTest = UdacityLogin.sharedInstance().udacityLogin(stringText, passwordText: stringPass)
             if udacityLoginTest == false {
                 alertViewMaker("The login connection has failed.", buttonTitle: "Please check your internet connection.")
             }
@@ -53,7 +53,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     func alertViewMaker(alertMessage:String, buttonTitle: String){
         self.activityIndicator.stopAnimating()
         UIApplication.sharedApplication().endIgnoringInteractionEvents()
-        var alert = UIAlertView(title: nil, message: alertMessage, delegate: self, cancelButtonTitle: buttonTitle)
+        let alert = UIAlertView(title: nil, message: alertMessage, delegate: self, cancelButtonTitle: buttonTitle)
         alert.show()
     }
     
@@ -86,7 +86,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     // Facebook Delegate Methods
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        println("User Logged In")
+        print("User Logged In")
         
         if ((error) != nil)
         {
@@ -98,7 +98,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         else {
             if result.grantedPermissions.contains("email")
             {
-                var udacityLoginTest = UdacityLogin.sharedInstance().udacityFacebookLogin()
+                let udacityLoginTest = UdacityLogin.sharedInstance().udacityFacebookLogin()
                 if udacityLoginTest == false {
                     alertViewMaker("The login connection has failed.", buttonTitle: "Please check your internet connection.")
                 }
@@ -111,11 +111,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-        println("User Logged Out")
+        print("User Logged Out")
     }
     
     func facebook(){
-        println("Facebook called")
+        print("Facebook called")
         if (FBSDKAccessToken.currentAccessToken() != nil)
         {
 
@@ -148,15 +148,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
             if ((error) != nil)
             {
                 // Process error
-                println("Error: \(error)")
+                print("Error: \(error)")
             }
             else
             {
-                println("fetched user: \(result)")
+                print("fetched user: \(result)")
                 let userName : NSString = result.valueForKey("name") as! NSString
-                println("User Name is: \(userName)")
+                print("User Name is: \(userName)")
                 let userEmail : NSString = result.valueForKey("email") as! NSString
-                println("User Email is: \(userEmail)")
+                print("User Email is: \(userEmail)")
             }
         })
     }
@@ -177,7 +177,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         facebook()
            }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
     

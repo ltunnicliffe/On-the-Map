@@ -198,7 +198,9 @@
 		AC205D391B60FAE00021DBF5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Luke Tunnicliffe";
 				TargetAttributes = {
 					AC205D401B60FAE00021DBF5 = {
@@ -326,6 +328,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -409,6 +412,7 @@
 				);
 				INFOPLIST_FILE = "On the Map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TunnicliffeMedia.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OnTheMap;
 				SWIFT_OBJC_BRIDGING_HEADER = "OnTheMap--Bridging-Header.h";
 				"SWIFT_OPTIMIZATION_LEVEL[arch=*]" = "-Onone";
@@ -433,6 +437,7 @@
 				);
 				INFOPLIST_FILE = "On the Map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TunnicliffeMedia.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OnTheMap;
 				SWIFT_OBJC_BRIDGING_HEADER = "OnTheMap--Bridging-Header.h";
 			};
@@ -448,6 +453,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "On the MapTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TunnicliffeMedia.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OnTheMapTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnTheMap.app/OnTheMap";
 			};
@@ -459,6 +465,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "On the MapTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TunnicliffeMedia.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OnTheMapTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnTheMap.app/OnTheMap";
 			};

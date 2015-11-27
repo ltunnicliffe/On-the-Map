@@ -30,15 +30,15 @@ class UdacityLogin: NSObject {
             } else {
                  /* 5. Parse the data */
                 let newData = data.subdataWithRange(NSMakeRange(5, data.length - 5))
-                println("This is the Udacity data \(NSString(data: newData, encoding: NSUTF8StringEncoding))")
+                print("This is the Udacity data \(NSString(data: newData, encoding: NSUTF8StringEncoding))")
                 var parsingError:NSError? = nil
-                let parsedResult = NSJSONSerialization.JSONObjectWithData(newData, options: NSJSONReadingOptions.AllowFragments, error: &parsingError) as! NSDictionary
+                let parsedResult = (try! NSJSONSerialization.JSONObjectWithData(newData, options: NSJSONReadingOptions.AllowFragments)) as! NSDictionary
                  /* 6. Use the data! */
                 if parsingError != nil {
-                    println("Failed to parse data.")
+                    print("Failed to parse data.")
                 }
                 else {
-                    println(parsedResult)
+                    print(parsedResult)
                 }
             }
 
@@ -66,15 +66,15 @@ class UdacityLogin: NSObject {
                 }
             }else {
             let newData = data.subdataWithRange(NSMakeRange(5, data.length - 5)) /* subset response data! */
-            println("This is the Udacity data \(NSString(data: newData, encoding: NSUTF8StringEncoding))")
+            print("This is the Udacity data \(NSString(data: newData, encoding: NSUTF8StringEncoding))")
                 var parsingError:NSError? = nil
-                let parsedResult = NSJSONSerialization.JSONObjectWithData(newData, options: NSJSONReadingOptions.AllowFragments, error: &parsingError) as! NSDictionary
+                let parsedResult = (try! NSJSONSerialization.JSONObjectWithData(newData, options: NSJSONReadingOptions.AllowFragments)) as! NSDictionary
                 /* 6. Use the data! */
                 if parsingError != nil {
-                    println("Failed to parse data.")
+                    print("Failed to parse data.")
                 }
                 else {
-                    println(parsedResult)
+                    print(parsedResult)
                 }
         }
         }

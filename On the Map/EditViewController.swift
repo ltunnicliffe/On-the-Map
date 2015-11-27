@@ -21,7 +21,7 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
     
@@ -51,7 +51,7 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     func locationFinder(){
         var localSearchRequest = MKLocalSearchRequest()
         localSearchRequest.naturalLanguageQuery = locationTextField.text
-        println(locationTextField.text)
+        print(locationTextField.text)
         var localSearch = MKLocalSearch(request: localSearchRequest)
         localSearch.startWithCompletionHandler { (localSearchResponse, error) -> Void in
             
@@ -79,11 +79,11 @@ class EditViewController: UIViewController, UITextFieldDelegate {
                     let newData = data.subdataWithRange(NSMakeRange(5, data.length - 5)) /* subset response data! */
                     //println(NSString(data: newData, encoding: NSUTF8StringEncoding))
                     var parsingError:NSError? = nil
-                    let parsedResult = NSJSONSerialization.JSONObjectWithData(newData, options: NSJSONReadingOptions.AllowFragments, error: &parsingError) as! NSDictionary
+                    let parsedResult = (try! NSJSONSerialization.JSONObjectWithData(newData, options: NSJSONReadingOptions.AllowFragments)) as! NSDictionary
                     //println(parsedResult)
                     var parsedDictionary2 = parsedResult["user"] as! NSDictionary
                     var parsedDictionary3:String = parsedDictionary2["nickname"] as! String
-                    println(parsedDictionary3)
+                    print(parsedDictionary3)
                     userPosting.userProperties["name"] = parsedDictionary3
                  }
             }

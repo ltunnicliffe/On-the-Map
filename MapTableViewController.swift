@@ -12,7 +12,7 @@ class MapTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("tableview array: \(mapUserArray)")
+        print("tableview array: \(mapUserArray)")
     }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -25,9 +25,9 @@ class MapTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) 
 
-        var cellFiller = mapUserArray[indexPath.row]
+        let cellFiller = mapUserArray[indexPath.row]
         
         if cellFiller.userProperties.isEmpty {
              cell.textLabel?.text = "Empty"
@@ -44,12 +44,12 @@ class MapTableViewController: UITableViewController {
 
         
         
-        var arraySelector = mapUserArray[indexPath.row]
+        let arraySelector = mapUserArray[indexPath.row]
         if arraySelector.userProperties.isEmpty{
             return
         }
         else {
-            var linkToUse = arraySelector.userProperties["annotationURL"]
+            let linkToUse = arraySelector.userProperties["annotationURL"]
             let linkURL = NSURL(string: linkToUse!)
             UIApplication.sharedApplication().openURL(linkURL!)
       }
