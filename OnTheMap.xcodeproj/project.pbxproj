@@ -13,6 +13,8 @@
 		AC205D4E1B60FAE00021DBF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC205D4D1B60FAE00021DBF5 /* Images.xcassets */; };
 		AC205D511B60FAE00021DBF5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC205D4F1B60FAE00021DBF5 /* LaunchScreen.xib */; };
 		AC205D5D1B60FAE00021DBF5 /* On_the_MapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC205D5C1B60FAE00021DBF5 /* On_the_MapTests.swift */; };
+		AC3BD6451C0ABF050055DCC7 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3BD6431C0ABF050055DCC7 /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
+		AC3BD6461C0ABF050055DCC7 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3BD6441C0ABF050055DCC7 /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
 		AC3CEC1B1B674AE600BDB502 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3CEC1A1B674AE600BDB502 /* NavigationViewController.swift */; };
 		AC5B902E1B676C1C0079FBD7 /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B902D1B676C1C0079FBD7 /* EditViewController.swift */; };
 		AC5B90311B6787160079FBD7 /* LinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5B90301B6787160079FBD7 /* LinkViewController.swift */; };
@@ -21,8 +23,6 @@
 		AC80D2141B66AA3E0051A9C7 /* MapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D2131B66AA3E0051A9C7 /* MapTableViewController.swift */; };
 		AC80D2161B66BA010051A9C7 /* MapUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D2151B66BA010051A9C7 /* MapUser.swift */; };
 		AC80D2181B66C0500051A9C7 /* ParseLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC80D2171B66C0500051A9C7 /* ParseLoader.swift */; };
-		ACD373D11B9439CF00BF8D64 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD373CF1B9439CF00BF8D64 /* FBSDKCoreKit.framework */; };
-		ACD373D21B9439CF00BF8D64 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACD373D01B9439CF00BF8D64 /* FBSDKLoginKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +46,9 @@
 		AC205D561B60FAE00021DBF5 /* OnTheMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTheMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC205D5B1B60FAE00021DBF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC205D5C1B60FAE00021DBF5 /* On_the_MapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = On_the_MapTests.swift; sourceTree = "<group>"; };
+		AC3BD6431C0ABF050055DCC7 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		AC3BD6441C0ABF050055DCC7 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		AC3BD6471C0ABF1C0055DCC7 /* OnTheMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnTheMap-Bridging-Header.h"; sourceTree = "<group>"; };
 		AC3CEC1A1B674AE600BDB502 /* NavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		AC5B902D1B676C1C0079FBD7 /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		AC5B90301B6787160079FBD7 /* LinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkViewController.swift; sourceTree = "<group>"; };
@@ -54,9 +57,6 @@
 		AC80D2131B66AA3E0051A9C7 /* MapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapTableViewController.swift; path = ../MapTableViewController.swift; sourceTree = "<group>"; };
 		AC80D2151B66BA010051A9C7 /* MapUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapUser.swift; sourceTree = "<group>"; };
 		AC80D2171B66C0500051A9C7 /* ParseLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseLoader.swift; sourceTree = "<group>"; };
-		ACC648CF1B7BAAC9004921B6 /* OnTheMap--Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnTheMap--Bridging-Header.h"; sourceTree = "<group>"; };
-		ACD373CF1B9439CF00BF8D64 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../../Desktop/Apps/Facebook SDK/FacebookSDKs-iOS-20150810/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
-		ACD373D01B9439CF00BF8D64 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../../Desktop/Apps/Facebook SDK/FacebookSDKs-iOS-20150810/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACD373D21B9439CF00BF8D64 /* FBSDKLoginKit.framework in Frameworks */,
-				ACD373D11B9439CF00BF8D64 /* FBSDKCoreKit.framework in Frameworks */,
+				AC3BD6461C0ABF050055DCC7 /* FBSDKLoginKit.framework in Frameworks */,
+				AC3BD6451C0ABF050055DCC7 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +82,12 @@
 		AC205D381B60FAE00021DBF5 = {
 			isa = PBXGroup;
 			children = (
-				ACC648CF1B7BAAC9004921B6 /* OnTheMap--Bridging-Header.h */,
 				AC205D431B60FAE00021DBF5 /* On the Map */,
 				AC205D591B60FAE00021DBF5 /* On the MapTests */,
 				AC205D421B60FAE00021DBF5 /* Products */,
-				ACD373CF1B9439CF00BF8D64 /* FBSDKCoreKit.framework */,
-				ACD373D01B9439CF00BF8D64 /* FBSDKLoginKit.framework */,
+				AC3BD6431C0ABF050055DCC7 /* FBSDKCoreKit.framework */,
+				AC3BD6441C0ABF050055DCC7 /* FBSDKLoginKit.framework */,
+				AC3BD6471C0ABF1C0055DCC7 /* OnTheMap-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,7 +198,8 @@
 		AC205D391B60FAE00021DBF5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Luke Tunnicliffe";
 				TargetAttributes = {
 					AC205D401B60FAE00021DBF5 = {
@@ -308,7 +309,7 @@
 		AC205D5E1B60FAE00021DBF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -326,6 +327,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -346,7 +348,6 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -354,7 +355,7 @@
 		AC205D5F1B60FAE00021DBF5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -385,8 +386,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -395,22 +394,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/workLuke/Desktop/FacebookSDKs-iOS-20150810",
-					"$(PROJECT_DIR)/On",
-					the,
-					Map,
-					/Users/workLuke/Desktop/Apps/Facebook,
-					"SDK/FacebookSDKs-iOS-20150810",
-					"$(PROJECT_DIR)",
-					/Users/workLuke/Desktop/Apps/Facebook,
-					"SDK/FacebookSDKs-iOS-20150810",
-				);
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = "On the Map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TunnicliffeMedia.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OnTheMap;
-				SWIFT_OBJC_BRIDGING_HEADER = "OnTheMap--Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "OnTheMap-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				"SWIFT_OPTIMIZATION_LEVEL[arch=*]" = "-Onone";
 			};
 			name = Debug;
@@ -419,22 +410,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/workLuke/Desktop/FacebookSDKs-iOS-20150810",
-					"$(PROJECT_DIR)/On",
-					the,
-					Map,
-					/Users/workLuke/Desktop/Apps/Facebook,
-					"SDK/FacebookSDKs-iOS-20150810",
-					"$(PROJECT_DIR)",
-					/Users/workLuke/Desktop/Apps/Facebook,
-					"SDK/FacebookSDKs-iOS-20150810",
-				);
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = "On the Map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TunnicliffeMedia.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OnTheMap;
-				SWIFT_OBJC_BRIDGING_HEADER = "OnTheMap--Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "OnTheMap-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -448,6 +430,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "On the MapTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TunnicliffeMedia.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OnTheMapTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnTheMap.app/OnTheMap";
 			};
@@ -459,6 +442,7 @@
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "On the MapTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "TunnicliffeMedia.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = OnTheMapTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OnTheMap.app/OnTheMap";
 			};

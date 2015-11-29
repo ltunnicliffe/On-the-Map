@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "20D755142F3DC56475D67429E92F64C95E9B674A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "87D62A2FBE2FB0BD5086BC87A0585D8D0CB4DB71" : 0,
+    "20D755142F3DC56475D67429E92F64C95E9B674A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "93D313DD-C09F-4E0D-8501-CCC48799E328",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "87D62A2FBE2FB0BD5086BC87A0585D8D0CB4DB71" : "Desktop\/Apps",
+    "20D755142F3DC56475D67429E92F64C95E9B674A" : "OnTheMap"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "OnTheMap",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "OnTheMap.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ltunnicliffe\/On-the-Map.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "20D755142F3DC56475D67429E92F64C95E9B674A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/www.github.com\/cornishgiant\/gitHubTest3.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "87D62A2FBE2FB0BD5086BC87A0585D8D0CB4DB71"
+    }
+  ]
+}

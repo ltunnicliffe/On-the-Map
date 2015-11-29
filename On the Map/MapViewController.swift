@@ -15,9 +15,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        println("mapUserInfo: \(mapUserArray)")
+        print("mapUserInfo: \(mapUserArray)")
 
-        var parseLoginTest = ParseLoader.sharedInstance().parseLogin()
+//        var parseLoginTest = ParseLoader.sharedInstance().parseLogin()
         userCreator()
            }
     
@@ -32,16 +32,16 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         var annotations = [MKPointAnnotation]()
 
         for user in mapUserArray {
-            println("userInfo: \(user)")
-            var latitude: CLLocationDegrees = user.userLocation["latitude"]!
-            var longitude: CLLocationDegrees  = user.userLocation["longitude"]!
-            var latDelta:CLLocationDegrees = 0.01
-            var longDelta:CLLocationDegrees = 0.01
-            var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
-            var location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-            var region:MKCoordinateRegion = MKCoordinateRegionMake (location, span)
+            print("userInfo: \(user)")
+            let latitude: CLLocationDegrees = user.userLocation["latitude"]!
+            let longitude: CLLocationDegrees  = user.userLocation["longitude"]!
+            let latDelta:CLLocationDegrees = 0.01
+            let longDelta:CLLocationDegrees = 0.01
+            let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+            let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+            let region:MKCoordinateRegion = MKCoordinateRegionMake (location, span)
             mapView.setRegion(region, animated:true)
-            var annotation = MKPointAnnotation()
+            let annotation = MKPointAnnotation()
             annotation.coordinate = location
             annotation.title = user.userProperties["name"]
             annotation.subtitle = user.userProperties["annotationURL"]
@@ -52,8 +52,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
-        println("View for annotation on.")
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        print("View for annotation on.")
         if annotation is MKUserLocation {
             //return nil so map view draws "blue dot" for standard user location
             return nil
@@ -67,7 +68,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             pinView!.canShowCallout = true
             pinView!.animatesDrop = true
             pinView!.pinColor = .Purple
-            pinView!.rightCalloutAccessoryView = UIButton.buttonWithType(.DetailDisclosure) as! UIButton
         }
         else {
             pinView!.annotation = annotation
@@ -75,14 +75,21 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         return pinView
     }
     
-    func mapView(mapView: MKMapView!, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        if control == annotationView.rightCalloutAccessoryView {
-            let linkURL=NSURL(string: annotationView.annotation.subtitle!)
-            UIApplication.sharedApplication().openURL(linkURL!)
-        }
+    
+//    func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+//            if control == annotationView.right
+//        
+//    }
+    
+    
+    
+    
+//    func mapView(mapView: MKMapView, annotationView: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+//        if control == annotationView.rightCalloutAccessoryView {
+//            let linkURL=NSURL(string: annotationView.annotation!.subtitle!!)
+//            UIApplication.sharedApplication().openURL(linkURL!)
+//        }
     }
     
 
 
-
-}

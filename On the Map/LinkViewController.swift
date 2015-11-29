@@ -25,21 +25,22 @@ class LinkViewController: UIViewController, UITextFieldDelegate, MKMapViewDelega
         self.linkTextField.delegate = self
         
         
-        var latitude: CLLocationDegrees =  userPosting.userLocation["latitude"]!
-        var longitude: CLLocationDegrees  =  userPosting.userLocation["longitude"]!
-        var latDelta:CLLocationDegrees = 0.01
-        var longDelta:CLLocationDegrees = 0.01
-        var span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
-        var location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
-        var region:MKCoordinateRegion = MKCoordinateRegionMake (location, span)
+        let latitude: CLLocationDegrees =  userPosting.userLocation["latitude"]!
+        let longitude: CLLocationDegrees  =  userPosting.userLocation["longitude"]!
+        let latDelta:CLLocationDegrees = 0.01
+        let longDelta:CLLocationDegrees = 0.01
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+        let location: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude, longitude)
+        let region:MKCoordinateRegion = MKCoordinateRegionMake (location, span)
         mapView.setRegion(region, animated:true)
-        var annotation = MKPointAnnotation()
+        let annotation = MKPointAnnotation()
         annotation.coordinate = location
         mapView.addAnnotation(annotation)
     }
 
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
     
@@ -61,9 +62,9 @@ class LinkViewController: UIViewController, UITextFieldDelegate, MKMapViewDelega
         request.addValue("QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY", forHTTPHeaderField: "X-Parse-REST-API-Key")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        var postString: String = "{\"uniqueKey\": \"1234\", \"firstName\": \"" + userPosting.userProperties["name"]! + "\", \"lastName\": \"Tate\",\"mapString\": \"Mountain View, CA\", \"mediaURL\": \"" + userPosting.userProperties["annotationURL"]! + "\""
-        var postString2: String = ",\"latitude\":" + String(stringInterpolationSegment: userPosting.userLocation["latitude"]!) + ", \"longitude\":" + String(stringInterpolationSegment: userPosting.userLocation["latitude"]!) + "}"
-        var completeString: String = postString + postString2
+        let postString: String = "{\"uniqueKey\": \"1234\", \"firstName\": \"" + userPosting.userProperties["name"]! + "\", \"lastName\": \"Tate\",\"mapString\": \"Mountain View, CA\", \"mediaURL\": \"" + userPosting.userProperties["annotationURL"]! + "\""
+        let postString2: String = ",\"latitude\":" + String(stringInterpolationSegment: userPosting.userLocation["latitude"]!) + ", \"longitude\":" + String(stringInterpolationSegment: userPosting.userLocation["latitude"]!) + "}"
+        let completeString: String = postString + postString2
         
         request.HTTPBody = completeString.dataUsingEncoding(NSUTF8StringEncoding)
         let session = NSURLSession.sharedSession()
@@ -71,7 +72,7 @@ class LinkViewController: UIViewController, UITextFieldDelegate, MKMapViewDelega
             if error != nil { // Handle error…
                 return
             }
-            println(NSString(data: data, encoding: NSUTF8StringEncoding))
+            print(NSString(data: data!, encoding: NSUTF8StringEncoding))
         }
         task.resume()
         

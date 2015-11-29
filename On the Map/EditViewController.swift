@@ -21,9 +21,14 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        self.view.endEditing(true)
+//    }
+    
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
     
     func textFieldShouldReturn(textField:UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -49,19 +54,19 @@ class EditViewController: UIViewController, UITextFieldDelegate {
     }
 
     func locationFinder(){
-        var localSearchRequest = MKLocalSearchRequest()
+        let localSearchRequest = MKLocalSearchRequest()
         localSearchRequest.naturalLanguageQuery = locationTextField.text
-        println(locationTextField.text)
-        var localSearch = MKLocalSearch(request: localSearchRequest)
+        print(locationTextField.text)
+        let localSearch = MKLocalSearch(request: localSearchRequest)
         localSearch.startWithCompletionHandler { (localSearchResponse, error) -> Void in
             
             if localSearchResponse == nil{
-                var alert = UIAlertView(title: nil, message: "Place not found", delegate: self, cancelButtonTitle: "Try again")
+                let alert = UIAlertView(title: nil, message: "Place not found", delegate: self, cancelButtonTitle: "Try again")
                 alert.show()
                 return
             }
-            userPosting.userLocation["latitude"] = localSearchResponse.boundingRegion.center.latitude
-            userPosting.userLocation["longitude"] = localSearchResponse.boundingRegion.center.longitude
+            userPosting.userLocation["latitude"] = localSearchResponse!.boundingRegion.center.latitude
+            userPosting.userLocation["longitude"] = localSearchResponse!.boundingRegion.center.longitude
             let linkViewController = self.storyboard!.instantiateViewControllerWithIdentifier("LinkViewController") as! LinkViewController
             self.presentViewController(linkViewController, animated: true, completion: nil)
            }
@@ -76,14 +81,38 @@ class EditViewController: UIViewController, UITextFieldDelegate {
                     return
                 }
                 else{
-                    let newData = data.subdataWithRange(NSMakeRange(5, data.length - 5)) /* subset response data! */
+                    let newData = data!.subdataWithRange(NSMakeRange(5, data!.length - 5)) /* subset response data! */
                     //println(NSString(data: newData, encoding: NSUTF8StringEncoding))
-                    var parsingError:NSError? = nil
-                    let parsedResult = NSJSONSerialization.JSONObjectWithData(newData, options: NSJSONReadingOptions.AllowFragments, error: &parsingError) as! NSDictionary
+                    //var parsingError:NSError? = nil
+                    
+                    let parsedResult: AnyObject!
+
+                    do {
+                        parsedResult = try NSJSONSerialization.JSONObjectWithData(newData, options: .AllowFragments)
+                    }
+                    catch {
+                        parsedResult = nil
+                        print("Could not parse the data as JSON: '\(newData)'")
+                        return
+                    }
+                    
+//                    let parsedResult = NSJSONSerialization.JSONObjectWithData(newData, options: NSJSONReadingOptions.AllowFragments, error: &parsingError) as! NSDictionary
                     //println(parsedResult)
-                    var parsedDictionary2 = parsedResult["user"] as! NSDictionary
-                    var parsedDictionary3:String = parsedDictionary2["nickname"] as! String
-                    println(parsedDictionary3)
+                    
+                    guard let parsedDictionary2 = parsedResult["user"] as? NSDictionary else {
+                        print("Could not parse the data as JSON: '\(parsedResult)'")
+                        return
+                    }
+                    
+//                    var parsedDictionary2 = parsedResult["user"] as! NSDictionary
+                    
+                    guard let parsedDictionary3:String = parsedDictionary2["nickname"] as? String else{
+                        print("Could not parse the data as JSON: '\(parsedDictionary2)'")
+                        return
+                    }
+                    
+//                    var parsedDictionary3:String = parsedDictionary2["nickname"] as! String
+//                    print(parsedDictionary3)
                     userPosting.userProperties["name"] = parsedDictionary3
                  }
             }
